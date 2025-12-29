@@ -1,0 +1,45 @@
+.about {
+  width: 100%;
+  padding: 60px 0;
+  background: #f6e8d8;
+}
+
+.about-overlay {
+  width:150vh;
+  margin: auto;
+  background-image: url("/about.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+.about-card {
+  background: #fff;
+  padding: 45px 40px;
+  max-width: 480px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.about-line {
+  width: 70px;
+  height: 4px;
+  background-color: #c97a2b;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}

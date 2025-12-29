@@ -1,0 +1,93 @@
+.testimonials {
+  padding: 90px 20px;
+  text-align: center;
+  background: #c7b49ee3; /* ✅ soft milk-beige */
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.testimonials-line {
+  width: 50px;
+  height: 3px;
+  background: #c97a2b;
+  margin: 14px auto 60px;
+}
+
+/* MAIN LAYOUT */
+.testimonial-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; /* more breathing space */
+    
+}
+
+/* ARROWS (single definition) */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 38px;
+  color: #777;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: #000;
+}
+
+/* TESTIMONIAL BOX */
+.testimonial-box {
+  max-width: 650px;
+}
+
+.stars {
+  color: #f4b400;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 24px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.testimonial-divider {
+  width: 40px;
+  height: 2px;
+  background: #c97a2b;
+  margin: 0 auto 15px;
+}
+
+.testimonial-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.testimonial-name span {
+  font-weight: 400;
+  color: #555;
+}
+
+/* DOTS */
+.testimonial-dots {
+  margin-top: 35px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.dot.active {
+  background: #333;
+}

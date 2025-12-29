@@ -1,0 +1,53 @@
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fafafa; /* ✅ mild white */
+}
+
+.services h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.services-line {
+  width: 50px;
+  height: 3px;
+  background: #c97a2b;
+  margin: 14px auto 50px;
+}
+
+/* ✅ PERFECT CENTERED GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 60px; /* reduced horizontal gap */
+  max-width: 1400px; /* 🔥 KEY FIX */
+  margin: 0 auto; /* center grid */
+  padding: 0 20px; /* equal left-right space */
+}
+
+.service-card {
+  max-width: 320px; /* prevents wide stretch */
+  margin: 0 auto;   /* center each card */
+}
+
+.service-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
