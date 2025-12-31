@@ -5,18 +5,41 @@ export default function About() {
     <section id="about" className="about">
       <div className="about-overlay">
         <div className="about-card">
-          <h2>About VISA Services</h2>
+          <h2>ABOUT US</h2>
 
           <div className="about-line"></div>
 
           <p>
-            At VISA Services, we specialize in providing comprehensive and
-            efficient visa solutions for travelers worldwide. Our team of
-            experienced professionals works diligently to ensure a seamless
-            application process for all types of visas. Whether for tourism,
-            business, or study, our service ensures every detail is attended to,
-            saving you time and effort as you prepare for your journey.
+            We are the <strong>sole and authorized travel & visa services partner</strong>{" "}
+            for <strong>Waaree Group</strong>, a globally recognized organization.
           </p>
+
+          <p>
+            We handle <strong>all travel-related services</strong> including visa processing,
+            documentation, and end-to-end travel assistance for Waaree’s international operations.
+          </p>
+
+          <p>
+            With Waaree’s worldwide presence, we proudly provide visa and travel services
+            for the following countries:
+          </p>
+
+          <div className="country-flags">
+            <div className="flag-item">
+              <img src="/usa.png" alt="USA" />
+              <span>USA</span>
+            </div>
+
+            <div className="flag-item">
+              <img src="/china.png" alt="China" />
+              <span>China</span>
+            </div>
+
+            <div className="flag-item">
+              <img src="/germany.png" alt="Germany" />
+              <span>Germany</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

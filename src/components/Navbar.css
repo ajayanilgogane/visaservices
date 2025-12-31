@@ -4,13 +4,15 @@
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
+  height:120px;
   z-index: 1000;
 }
 
 .navbar-container {
   max-width: 1200px;
   margin: auto;
-  padding: 18px 30px;
+  height: 125px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +22,7 @@
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-left: -30vh;
+  margin-left: -10vh;
   color: #7a4a1d;
   font-family: "Georgia", serif;
 }

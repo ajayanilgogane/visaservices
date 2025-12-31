@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="logo">LATA TRAVELS</div>
 
         <nav className="menu">
-          <a href="#home">HOME</a>
+          <a href="#hero">HOME</a>
           <a href="#about">ABOUT</a>
           <a href="#services">SERVICES</a>
           <a href="#testimonials">TESTIMONIALS</a>

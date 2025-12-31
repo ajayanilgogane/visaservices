@@ -37,8 +37,8 @@ export default function Contact() {
         {/* LEFT INFO */}
         <div className="contact-info">
           <p><strong>Mumbai, Maharashtra, India</strong></p>
-          <p>📞 +91-919082405292 – <span>LATA TRAVELS</span></p>
-          <p>✉️ LATATRAVELS6@GMAIL.COM</p>
+          <p>📞 +91-919082405292 – <span>LATA VISA SERVIVES</span></p>
+          <p>✉️ Latatravels6@gmail.com</p>
           <p>🕒 Mon–Fri : 08:00–19:00</p>
         </div>
 
