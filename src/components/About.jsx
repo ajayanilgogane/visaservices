@@ -4,6 +4,8 @@ export default function About() {
   return (
     <section id="about" className="about">
       <div className="about-overlay">
+        
+        {/* LEFT CONTENT */}
         <div className="about-card">
           <h2>ABOUT US</h2>
 
@@ -41,6 +43,12 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="about-image">
+          <img src="/company.png" alt="Company" />
+        </div>
+
       </div>
     </section>
   );
