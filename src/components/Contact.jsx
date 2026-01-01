@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./Contact.css";
 
 export default function Contact() {
   const formRef = useRef();
@@ -12,70 +11,206 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_d40zw8k",       // ✅ your service ID
-        "template_ug29ptf",      // ✅ your template ID
+        "service_d40zw8k",
+        "template_ug29ptf",
         formRef.current,
-        "HjT_rKDyZUz81Z6Fn"      // ✅ your public key
+        "HjT_rKDyZUz81Z6Fn"
       )
       .then(() => {
         alert("✅ Message sent successfully!");
         formRef.current.reset();
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
         alert("❌ Failed to send message");
       })
       .finally(() => setSending(false));
   };
 
   return (
-    <section id="contact" className="contact">
-      <h2>CONTACT</h2>
-      <div className="contact-line"></div>
+    <section id="contact">
+      {/* ===== HERO HEADER ===== */}
+      <div
+        style={{
+          position: "relative",
+          height: "60vh",
+          backgroundImage: 'url("/meeting.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          color: "#fff",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0, 0, 0, 0.32)",
+          }}
+        ></div>
 
-      <div className="contact-container">
-        {/* LEFT INFO */}
-        <div className="contact-info">
-          <p><strong>Mumbai, Maharashtra, India</strong></p>
-          <p>📞 +91-919082405292 – <span>LATA VISA SERVIVES</span></p>
-          <p>✉️ Latatravels6@gmail.com</p>
-          <p>🕒 Mon–Fri : 08:00–19:00</p>
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <h1 style={{ fontSize: "42px", marginBottom: "10px" }}>
+            Contact Us
+          </h1>
+          <p style={{ opacity: 0.9 }}>
+            Feel free to get in touch with us
+          </p>
         </div>
+      </div>
 
-        {/* RIGHT FORM */}
-        <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
-          <div className="form-row">
+      {/* ===== FORM SECTION ===== */}
+      <div
+        style={{
+          padding: "70px 20px",
+          background: "#fafafa",
+          textAlign: "center",
+        }}
+      >
+        <h2 style={{ marginBottom: "10px" }}>
+          Feel Free to Get in Touch with Us
+        </h2>
+        <p style={{ marginBottom: "40px", color: "#777" }}>
+          Contact With Us
+        </p>
+
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          style={{
+            maxWidth: "800px",
+            margin: "auto",
+            background: "#fff",
+            padding: "40px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "20px",
+            }}
+          >
             <input
               type="text"
-              name="name"          // 🔴 must match template
+              name="name"
               placeholder="Name"
               required
+              style={inputStyle}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              style={inputStyle}
             />
             <input
               type="text"
               name="phone"
-              placeholder="Phone"
+              placeholder="Phone Number"
+              style={inputStyle}
             />
+            <select name="service" style={inputStyle}>
+              <option>Select Services</option>
+              <option>Visa</option>
+              <option>Travel</option>
+              <option>Documentation</option>
+            </select>
           </div>
 
-          <input
-            type="email"
-            name="email"          // 🔴 must match template
-            placeholder="Email address"
-            required
-          />
-
           <textarea
-            name="message"        // 🔴 must match template
+            name="message"
             placeholder="Message"
             required
+            style={{
+              ...inputStyle,
+              marginTop: "20px",
+              height: "120px",
+            }}
           ></textarea>
 
-          <button type="submit" disabled={sending}>
-            {sending ? "Sending..." : "CONTACT US"}
+          <button
+            type="submit"
+            disabled={sending}
+            style={{
+              marginTop: "25px",
+              background: "#ff0000",
+              color: "#fff",
+              border: "none",
+              padding: "12px 28px",
+              fontWeight: "600",
+              cursor: "pointer",
+            }}
+          >
+            {sending ? "Sending..." : "Send a Message"}
           </button>
         </form>
       </div>
+
+      {/* ===== INFO CARDS ===== */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "20px",
+          padding: "40px 20px",
+          background: "#f3ece8",
+          textAlign: "center",
+        }}
+      >
+        <InfoCard title="Write to Us" text="Latatravels6@gmail.com" />
+        <InfoCard title="Visit Us" text="Mumbai, Maharashtra, India" />
+        <InfoCard title="Call Us" text="+91 919082405292" />
+      </div>
+
+      {/* ===== MAP ===== */}
+      <iframe
+        title="map"
+        src="https://www.google.com/maps?q=Mumbai&output=embed"
+        width="100%"
+        height="350"
+        style={{ border: 0 }}
+        loading="lazy"
+      ></iframe>
+
+      {/* ===== MOBILE FIX ===== */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            h1 { font-size: 30px !important; }
+            form { padding: 25px !important; }
+            form div { grid-template-columns: 1fr !important; }
+          }
+        `}
+      </style>
     </section>
+  );
+}
+
+/* ===== HELPERS ===== */
+const inputStyle = {
+  padding: "12px",
+  border: "1px solid #ddd",
+  width: "100%",
+};
+
+function InfoCard({ title, text }) {
+  return (
+    <div
+      style={{
+        background: "#fff",
+        padding: "25px",
+        boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
+      }}
+    >
+      <h4 style={{ marginBottom: "10px", color: "#ff0000" }}>
+        {title}
+      </h4>
+      <p>{text}</p>
+    </div>
   );
 }
