@@ -1,14 +1,14 @@
 export default function About() {
   return (
     <>
-      {/* ================= ABOUT / SERVICES SECTION ================= */}
+      {/* ================= ABOUT / SERVICES ================= */}
       <section
         id="about"
         style={{
           position: "relative",
-          padding: "80px 20px 50px", // 🔽 reduced bottom gap
+          padding: "80px 20px 50px",
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.85), rgba(0,0,0,0.55)), url('/service-bg.png')",
+            "linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.55)), url('/service-bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "#fff",
@@ -53,40 +53,21 @@ export default function About() {
 
           {/* RIGHT CONTENT */}
           <div style={{ flex: "1", minWidth: "280px" }}>
-            <p
-              style={{
-                color: "#ff0000",
-                fontSize: "13px",
-                letterSpacing: "1px",
-                fontWeight: "600",
-                marginBottom: "8px",
-              }}
-            >
-              WHAT WE DO
-            </p>
-
-            <h2
-              style={{
-                fontSize: "32px",
-                fontWeight: "700",
-                marginBottom: "16px",
-              }}
-            >
-              Services We Provide
-            </h2>
+            <p style={labelStyle}>WHAT WE DO</p>
+            <h2 style={headingStyle}>Services We Provide</h2>
 
             <p style={aboutPara}>
               We provide professional travel and visa services for individuals,
-              corporate clients, and worldwide solar industries including
-              <strong> Waaree Energies</strong> and many other global solar companies.
+              corporate clients, and global industries including
+              <strong> Waaree Energies</strong>.
             </p>
 
             <p style={aboutPara}>
-              We are also <strong>specialized in Visa Extension</strong>,
-              documentation, business travel, and long-term global assignments.
+              We are specialized in <strong>Visa Extension</strong>,
+              documentation, business travel, and long-term assignments.
             </p>
 
-            <ul style={{ listStyle: "none", padding: 0, marginTop: "10px" }}>
+            <ul style={{ listStyle: "none", padding: 0 }}>
               {[
                 "Visa Services",
                 "Holiday Packages",
@@ -105,22 +86,12 @@ export default function About() {
         </div>
       </section>
 
-      {/* ================= DIVIDER (MINIMAL GAP) ================= */}
-      <div
-        style={{
-          height: "1px",
-          background: "#ddd",
-          maxWidth: "1100px",
-          margin: "19px auto", // 🔽 reduced a lot
-        }}
-      />
-
       {/* ================= FOUNDER TALK ================= */}
       <section
         id="founder"
         style={{
-          padding: "60px 20px", // 🔽 reduced
-          background: "#544949b4",
+          padding: "60px 20px",
+          background: "#bdafafff",
         }}
       >
         <div
@@ -150,13 +121,7 @@ export default function About() {
 
           {/* TEXT */}
           <div style={{ flex: "2", minWidth: "280px" }}>
-            <h2
-              style={{
-                fontSize: "30px",
-                fontWeight: "700",
-                marginBottom: "16px",
-              }}
-            >
+            <h2 style={{ fontSize: "30px", fontWeight: "700" }}>
               Founder’s Talk
             </h2>
 
@@ -166,19 +131,76 @@ export default function About() {
             </p>
 
             <p style={founderPara}>
-              From a journey as a seasoned travel agent to acquiring a degree from
-              the <strong> International Air Transport Association (IATA)</strong>,
-              I ventured into entrepreneurship. My diverse background fuels
-              Newland Travel, ensuring top-notch services.
+              From a seasoned travel agent to an IATA-certified professional,
+              I built <strong>Lata Travels</strong> with trust and expertise.
             </p>
 
-            <p style={{ fontWeight: "700", marginTop: "8px" }}>
-              Lata –{" "}
-              <span style={{ fontWeight: "400" }}>
-                Lata Travels
-              </span>
+            {/* ✅ EXTRA PROFESSIONAL LINES */}
+            <p style={founderPara}>
+              Our goal has always been to simplify international travel by
+              offering transparent processes, expert guidance, and dependable
+              support at every stage of the journey.
+            </p>
+
+            <p style={{ fontWeight: "700" }}>
+              Jeshika Joshi –{" "}
+              <span style={{ fontWeight: "400" }}>Lata Travels</span>
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ================= COUNTRIES WE SERVE ================= */}
+      <section
+        style={{
+          padding: "35px 20px",
+          background: "#877777c4",
+          textAlign: "center",
+        }}
+      >
+        <h3 style={{ fontSize: "22px",fontWeight:"bold", fontWeight: "700", marginBottom: "8px" }}>
+          Countries We Have Serve
+        </h3>
+
+        <p style={{ fontSize: "14px",fontWeight:"bold", color: "#3c3b3bff", marginBottom: "18px" }}>
+          We proudly provide visa and travel services worldwide.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "24px",
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { name: "USA", img: "/usa.png" },
+            { name: "China", img: "/china.png" },
+            { name: "Germany", img: "/germany.png" },
+          ].map((c, i) => (
+            <div
+              key={i}
+              style={{
+                width: "110px",
+                padding: "14px",
+                borderRadius: "10px",
+                boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+              }}
+            >
+              <img
+                src={c.img}
+                alt={c.name}
+                style={{
+                  width: "60px",
+                  height: "40px",
+                  objectFit: "cover",
+                  marginBottom: "8px",
+                }}
+              />
+              <h4 style={{ fontSize: "14px", fontWeight: "600" }}>{c.name}</h4>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -186,8 +208,8 @@ export default function About() {
       <style>
         {`
           @media (max-width: 768px) {
-            #about, #founder {
-              padding: 50px 20px !important;
+            section {
+              padding: 40px 20px !important;
               text-align: center;
             }
 
@@ -207,27 +229,35 @@ export default function About() {
   );
 }
 
-/* ===== SHARED STYLES ===== */
+/* ===== STYLES ===== */
+const labelStyle = {
+  color: "#ff0000",
+  fontSize: "13px",
+  letterSpacing: "1px",
+  fontWeight: "600",
+};
+
+const headingStyle = {
+  fontSize: "32px",
+  fontWeight: "700",
+};
+
 const aboutPara = {
   fontSize: "15px",
   lineHeight: "1.7",
   opacity: 0.95,
-  marginBottom: "16px",
 };
 
 const founderPara = {
   fontSize: "15px",
   lineHeight: "1.7",
   color: "#444",
-  marginBottom: "14px",
 };
 
 const quoteStyle = {
   fontStyle: "italic",
   fontSize: "16px",
-  lineHeight: "1.7",
   color: "#333",
-  marginBottom: "14px",
 };
 
 const listItem = {

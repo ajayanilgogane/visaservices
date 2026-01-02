@@ -5,7 +5,7 @@ export default function Navbar() {
         position: "sticky",
         top: 0,
         width: "100%",
-        background: "#ffffff",
+        background: "#fffbfbff",
         borderBottom: "1px solid #eee",
         zIndex: 1000,
       }}
@@ -14,23 +14,38 @@ export default function Navbar() {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "10px 20px", // 👈 small height
+          padding: "10px 20px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
-        {/* LOGO */}
+        {/* LOGO (IMAGE + TEXT) */}
         <div
           style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
             fontSize: "20px",
             fontWeight: "700",
             letterSpacing: "1px",
-            color: "#7a4a1d",
+            color: "#cb6302e9",
             fontFamily: "Georgia, serif",
+            cursor: "pointer",
           }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          LATA TRAVELS
+          <img
+            src="/logos.avif"
+            alt="Lata Travels Logo"
+            style={{
+              width: "38px",
+              height: "38px",
+              objectFit: "contain",
+            }}
+          />
+          <span>LATA TRAVELS</span>
         </div>
 
         {/* MENU */}
@@ -75,7 +90,7 @@ export default function Navbar() {
           @media (max-width: 768px) {
             header > div {
               flex-direction: column;
-              gap: 10px;
+              gap: 12px;
             }
 
             .nav-menu {
@@ -86,6 +101,11 @@ export default function Navbar() {
 
             header a {
               font-size: 13px !important;
+            }
+
+            header img {
+              width: 34px !important;
+              height: 34px !important;
             }
           }
         `}

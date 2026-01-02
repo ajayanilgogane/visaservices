@@ -71,11 +71,10 @@ export default function Services() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-          gap: "60px 50px",
-          maxWidth: "1400px",
+          gridTemplateColumns: "repeat(3, 1fr)", // ✅ FORCE 3 PER ROW
+          gap: "60px 40px",
+          maxWidth: "1200px",
           margin: "0 auto",
-          padding: "0 20px",
         }}
       >
         {services.map((item, index) => (
@@ -121,17 +120,27 @@ export default function Services() {
         ))}
       </div>
 
-      {/* RESPONSIVE FIX */}
+      {/* RESPONSIVE BREAKPOINTS */}
       <style>
         {`
-          @media (max-width: 768px) {
-            #services h2 {
-              font-size: 24px !important;
+          @media (max-width: 1024px) {
+            #services > div:nth-of-type(3) {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+          }
+
+          @media (max-width: 600px) {
+            #services > div:nth-of-type(3) {
+              grid-template-columns: 1fr !important;
             }
 
             #services img {
               width: 130px !important;
               height: 130px !important;
+            }
+
+            #services h2 {
+              font-size: 24px !important;
             }
           }
         `}
