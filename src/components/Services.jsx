@@ -1,5 +1,3 @@
-import "./Services.css";
-
 export default function Services() {
   const services = [
     {
@@ -20,8 +18,6 @@ export default function Services() {
       desc:
         "We help travelers obtain tourist visas quickly and efficiently, providing guidance through each step of the process."
     },
-
-    /* 🔽 MORE SERVICES (SECOND ROW) */
     {
       title: "Family Visa Services",
       img: "/services5.webp",
@@ -43,19 +39,103 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="services">
-      <h2>SERVICES</h2>
-      <div className="services-line"></div>
+    <section
+      id="services"
+      style={{
+        padding: "80px 20px",
+        background: "#fafafa",
+        textAlign: "center",
+      }}
+    >
+      {/* HEADER */}
+      <h2
+        style={{
+          fontSize: "28px",
+          fontWeight: "700",
+          letterSpacing: "1px",
+        }}
+      >
+        SERVICES
+      </h2>
 
-      <div className="services-grid">
+      <div
+        style={{
+          width: "50px",
+          height: "3px",
+          background: "#c97a2b",
+          margin: "14px auto 50px",
+        }}
+      />
+
+      {/* GRID */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+          gap: "60px 50px",
+          maxWidth: "1400px",
+          margin: "0 auto",
+          padding: "0 20px",
+        }}
+      >
         {services.map((item, index) => (
-          <div className="service-card" key={index}>
-            <img src={item.img} alt={item.title} />
-            <h3>{item.title}</h3>
-            <p>{item.desc}</p>
+          <div
+            key={index}
+            style={{
+              maxWidth: "320px",
+              margin: "0 auto",
+            }}
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              style={{
+                width: "160px",
+                height: "160px",
+                objectFit: "cover",
+                borderRadius: "50%",
+                marginBottom: "20px",
+              }}
+            />
+
+            <h3
+              style={{
+                fontSize: "16px",
+                fontWeight: "700",
+                marginBottom: "10px",
+              }}
+            >
+              {item.title}
+            </h3>
+
+            <p
+              style={{
+                fontSize: "14px",
+                color: "#444",
+                lineHeight: "1.6",
+              }}
+            >
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>
+
+      {/* RESPONSIVE FIX */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            #services h2 {
+              font-size: 24px !important;
+            }
+
+            #services img {
+              width: 130px !important;
+              height: 130px !important;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 }

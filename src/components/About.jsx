@@ -1,155 +1,238 @@
-export default function ServicesSection() {
+export default function About() {
   return (
-    <section
-      id="about"
-      style={{
-        position: "relative",
-        padding: "100px 20px",
-        backgroundImage:
-          "linear-gradient(rgba(0, 0, 0, 0.89), rgba(0,0,0,0.55)), url('/service-bg.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        color: "#fff",
-      }}
-    >
-      <div
+    <>
+      {/* ================= ABOUT / SERVICES SECTION ================= */}
+      <section
+        id="about"
         style={{
-          maxWidth: "1200px",
-          margin: "auto",
-          display: "flex",
-          alignItems: "center",
-          gap: "60px",
-          flexWrap: "wrap",
+          position: "relative",
+          padding: "80px 20px 50px", // 🔽 reduced bottom gap
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.85), rgba(0,0,0,0.55)), url('/service-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          color: "#fff",
         }}
       >
-        {/* LEFT IMAGES */}
         <div
           style={{
-            flex: "1",
-            minWidth: "280px",
-            position: "relative",
+            maxWidth: "1200px",
+            margin: "auto",
+            display: "flex",
+            alignItems: "center",
+            gap: "50px",
+            flexWrap: "wrap",
           }}
         >
-          <img
-            src="/services1.jpeg"
-            alt="Visa Process"
-            style={{
-              width: "100%",
-              maxWidth: "420px",
-              borderRadius: "12px",
-              boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
-            }}
-          />
+          {/* LEFT IMAGES */}
+          <div style={{ flex: "1", minWidth: "280px", position: "relative" }}>
+            <img
+              src="/services1.jpeg"
+              alt="Visa Process"
+              style={{
+                width: "100%",
+                maxWidth: "420px",
+                borderRadius: "12px",
+                boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
+              }}
+            />
 
-          <img
-            src="/services2.webp"
-            alt="Global Services"
-            style={{
-              width: "65%",
-              position: "absolute",
-              bottom: "-40px",
-              right: "-20px",
-              borderRadius: "12px",
-              boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
-            }}
-          />
+            <img
+              src="/services2.webp"
+              alt="Global Services"
+              style={{
+                width: "65%",
+                position: "absolute",
+                bottom: "-35px",
+                right: "-15px",
+                borderRadius: "12px",
+                boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
+              }}
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div style={{ flex: "1", minWidth: "280px" }}>
+            <p
+              style={{
+                color: "#ff0000",
+                fontSize: "13px",
+                letterSpacing: "1px",
+                fontWeight: "600",
+                marginBottom: "8px",
+              }}
+            >
+              WHAT WE DO
+            </p>
+
+            <h2
+              style={{
+                fontSize: "32px",
+                fontWeight: "700",
+                marginBottom: "16px",
+              }}
+            >
+              Services We Provide
+            </h2>
+
+            <p style={aboutPara}>
+              We provide professional travel and visa services for individuals,
+              corporate clients, and worldwide solar industries including
+              <strong> Waaree Energies</strong> and many other global solar companies.
+            </p>
+
+            <p style={aboutPara}>
+              We are also <strong>specialized in Visa Extension</strong>,
+              documentation, business travel, and long-term global assignments.
+            </p>
+
+            <ul style={{ listStyle: "none", padding: 0, marginTop: "10px" }}>
+              {[
+                "Visa Services",
+                "Holiday Packages",
+                "Study Abroad",
+                "Flight Tickets",
+                "Travel Insurance",
+                "Visa Extension Services",
+              ].map((item, i) => (
+                <li key={i} style={listItem}>
+                  <span style={{ color: "#ff0000", marginRight: "10px" }}>✔</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </section>
 
-        {/* RIGHT CONTENT */}
-        <div style={{ flex: "1", minWidth: "280px" }}>
-          <p
-            style={{
-              color: "#ff0000",
-              fontSize: "13px",
-              letterSpacing: "1px",
-              fontWeight: "600",
-              marginBottom: "10px",
-            }}
-          >
-            WHAT WE DO
-          </p>
+      {/* ================= DIVIDER (MINIMAL GAP) ================= */}
+      <div
+        style={{
+          height: "1px",
+          background: "#ddd",
+          maxWidth: "1100px",
+          margin: "19px auto", // 🔽 reduced a lot
+        }}
+      />
 
-          <h2
-            style={{
-              fontSize: "34px",
-              fontWeight: "700",
-              marginBottom: "20px",
-            }}
-          >
-            Services We Provide
-          </h2>
+      {/* ================= FOUNDER TALK ================= */}
+      <section
+        id="founder"
+        style={{
+          padding: "60px 20px", // 🔽 reduced
+          background: "#544949b4",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "auto",
+            display: "flex",
+            alignItems: "center",
+            gap: "50px",
+            flexWrap: "wrap",
+          }}
+        >
+          {/* IMAGE */}
+          <div style={{ flex: "1", display: "flex", justifyContent: "center" }}>
+            <img
+              src="/profile.jpeg"
+              alt="Founder"
+              style={{
+                width: "260px",
+                height: "260px",
+                objectFit: "cover",
+                borderRadius: "50%",
+                boxShadow: "0 15px 40px rgba(0,0,0,0.2)",
+              }}
+            />
+          </div>
 
-          <p
-            style={{
-              fontSize: "15px",
-              lineHeight: "1.7",
-              opacity: 0.95,
-              marginBottom: "20px",
-            }}
-          >
-            We provide professional travel and visa services for individuals,
-            corporate clients, and worldwide solar industries including
-            <strong> Waaree Energies</strong> and many other global solar
-            companies. Our expertise ensures seamless international mobility.
-          </p>
+          {/* TEXT */}
+          <div style={{ flex: "2", minWidth: "280px" }}>
+            <h2
+              style={{
+                fontSize: "30px",
+                fontWeight: "700",
+                marginBottom: "16px",
+              }}
+            >
+              Founder’s Talk
+            </h2>
 
-          <p
-            style={{
-              fontSize: "15px",
-              lineHeight: "1.7",
-              opacity: 0.95,
-              marginBottom: "20px",
-            }}
-          >
-            We are also <strong>specialized in Visa Extension</strong>,
-            documentation, business travel, and long-term global assignments.
-          </p>
+            <p style={quoteStyle}>
+              “My journey began with a dead-end job and finished with me climbing
+              new heights as a startup founder.”
+            </p>
 
-          {/* SERVICES LIST */}
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            {[
-              "Visa Services",
-              "Holiday Packages",
-              "Study Abroad",
-              "Flight Tickets",
-              "Travel Insurance",
-              "Visa Extension Services",
-            ].map((item, i) => (
-              <li
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "10px",
-                  fontSize: "15px",
-                }}
-              >
-                <span style={{ color: "#ff0000", marginRight: "10px" }}>✔</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+            <p style={founderPara}>
+              From a journey as a seasoned travel agent to acquiring a degree from
+              the <strong> International Air Transport Association (IATA)</strong>,
+              I ventured into entrepreneurship. My diverse background fuels
+              Newland Travel, ensuring top-notch services.
+            </p>
+
+            <p style={{ fontWeight: "700", marginTop: "8px" }}>
+              Lata –{" "}
+              <span style={{ fontWeight: "400" }}>
+                Lata Travels
+              </span>
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* RESPONSIVE */}
+      {/* ================= RESPONSIVE ================= */}
       <style>
         {`
           @media (max-width: 768px) {
-            #services {
-              padding: 70px 20px;
+            #about, #founder {
+              padding: 50px 20px !important;
+              text-align: center;
             }
 
-            #services h2 {
-              font-size: 26px !important;
-            }
-
-            #services img:nth-child(2) {
+            #about img:nth-child(2) {
               display: none;
+            }
+
+            #founder img {
+              width: 220px !important;
+              height: 220px !important;
+              margin-bottom: 20px;
             }
           }
         `}
       </style>
-    </section>
+    </>
   );
 }
+
+/* ===== SHARED STYLES ===== */
+const aboutPara = {
+  fontSize: "15px",
+  lineHeight: "1.7",
+  opacity: 0.95,
+  marginBottom: "16px",
+};
+
+const founderPara = {
+  fontSize: "15px",
+  lineHeight: "1.7",
+  color: "#444",
+  marginBottom: "14px",
+};
+
+const quoteStyle = {
+  fontStyle: "italic",
+  fontSize: "16px",
+  lineHeight: "1.7",
+  color: "#333",
+  marginBottom: "14px",
+};
+
+const listItem = {
+  display: "flex",
+  alignItems: "center",
+  marginBottom: "8px",
+  fontSize: "15px",
+};
