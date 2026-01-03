@@ -125,7 +125,7 @@ export default function Services() {
         {`
           @media (max-width: 1024px) {
             #services > div:nth-of-type(3) {
-              grid-template-columns: repeat(2, 1fr) !important;
+              grid-template-columns: repeat(3, 1fr) !important;
             }
           }
 
