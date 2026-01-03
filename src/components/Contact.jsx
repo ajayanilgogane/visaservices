@@ -163,7 +163,7 @@ export default function Contact() {
         }}
       >
         <InfoCard title="Write to Us" text="Latatravels6@gmail.com" />
-        <InfoCard title="Visit Us" text="Vasai,Mumbai, Maharashtra, India" />
+        <InfoCard title="Visit Us" text="Mumbai, Maharashtra, India" />
         <InfoCard title="Call Us" text="+91 919082405292" />
       </div>
 

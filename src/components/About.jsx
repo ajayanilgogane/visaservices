@@ -59,12 +59,14 @@ export default function About() {
             <p style={aboutPara}>
               We provide professional travel and visa services for individuals,
               corporate clients, and global industries including
-              <strong> Waaree Energies</strong>.
+              <strong> Waaree Energies Limited, TATA Power, Renewsys, Vikram Solar, etc</strong>.
+             
             </p>
 
             <p style={aboutPara}>
               We are specialized in <strong>Visa Extension</strong>,
               documentation, business travel, and long-term assignments.
+          <strong>Overall we provide services to all the Solar Industries located in India and worldwide.</strong>
             </p>
 
             <ul style={{ listStyle: "none", padding: 0 }}>
@@ -104,7 +106,6 @@ export default function About() {
             flexWrap: "wrap",
           }}
         >
-          {/* IMAGE */}
           <div style={{ flex: "1", display: "flex", justifyContent: "center" }}>
             <img
               src="/profile.jpeg"
@@ -119,7 +120,6 @@ export default function About() {
             />
           </div>
 
-          {/* TEXT */}
           <div style={{ flex: "2", minWidth: "280px" }}>
             <h2 style={{ fontSize: "30px", fontWeight: "700" }}>
               Founder’s Talk
@@ -135,11 +135,10 @@ export default function About() {
               I built <strong>Lata Travels</strong> with trust and expertise.
             </p>
 
-            {/* ✅ EXTRA PROFESSIONAL LINES */}
             <p style={founderPara}>
-              Our goal has always been to simplify international travel by
-              offering transparent processes, expert guidance, and dependable
-              support at every stage of the journey.
+              Our mission is to make international travel stress-free by offering
+              transparent guidance, timely processing, and dependable support
+              at every step.
             </p>
 
             <p style={{ fontWeight: "700" }}>
@@ -153,17 +152,17 @@ export default function About() {
       {/* ================= COUNTRIES WE SERVE ================= */}
       <section
         style={{
-          padding: "35px 20px",
+          padding: "40px 20px",
           background: "#877777c4",
           textAlign: "center",
         }}
       >
-        <h3 style={{ fontSize: "22px",fontWeight:"bold", fontWeight: "700", marginBottom: "8px" }}>
-          Countries We Have Serve
+        <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "8px" }}>
+          Countries We Serve
         </h3>
 
-        <p style={{ fontSize: "14px",fontWeight:"bold", color: "#3c3b3bff", marginBottom: "18px" }}>
-          We proudly provide visa and travel services worldwide.
+        <p style={{ fontSize: "14px", color: "#3c3b3b", marginBottom: "22px" }}>
+          We proudly provide visa and travel services for multiple destinations worldwide.
         </p>
 
         <div
@@ -178,6 +177,9 @@ export default function About() {
             { name: "USA", img: "/usa.png" },
             { name: "China", img: "/china.png" },
             { name: "Germany", img: "/germany.png" },
+            { name: "Australia", img: "/australia.jpeg" },
+            { name: "United Kingdom", img: "/uk.jpeg" },
+            { name: "Vietnam", img: "/vietnam.jpeg" },
           ].map((c, i) => (
             <div
               key={i}
@@ -185,6 +187,7 @@ export default function About() {
                 width: "110px",
                 padding: "14px",
                 borderRadius: "10px",
+                background: "#fff",
                 boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
               }}
             >
@@ -198,7 +201,9 @@ export default function About() {
                   marginBottom: "8px",
                 }}
               />
-              <h4 style={{ fontSize: "14px", fontWeight: "600" }}>{c.name}</h4>
+              <h4 style={{ fontSize: "13px", fontWeight: "600" }}>
+                {c.name}
+              </h4>
             </div>
           ))}
         </div>

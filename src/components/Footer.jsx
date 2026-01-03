@@ -26,7 +26,7 @@ export default function Footer() {
       >
         <p style={{ fontSize: "14px", opacity: 0.9 }}>
           Approved Traveler Visa Applications.{" "}
-          <strong style={{ textDecoration: "underline" }}>
+          <strong>
             Get Your Visa
           </strong>
         </p>
@@ -101,7 +101,7 @@ export default function Footer() {
           <p style={contact}>📧 Latatravels6@gmail.com</p>
           <p style={contact}>📞 +91 91908 24052</p>
           <p style={contact}>
-            📍 Vasai, Mumbai, Maharashtra, India
+            📍Mumbai, Maharashtra, India
           </p>
         </div>
       </div>
