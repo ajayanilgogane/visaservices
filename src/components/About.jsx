@@ -36,7 +36,6 @@ export default function About() {
                 boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
               }}
             />
-
             <img
               src="/services2.webp"
               alt="Global Services"
@@ -59,14 +58,12 @@ export default function About() {
             <p style={aboutPara}>
               We provide professional travel and visa services for individuals,
               corporate clients, and global industries including
-              <strong> Waaree Energies Limited, TATA Power, Renewsys, Vikram Solar, etc</strong>.
-             
+              <strong> Waaree Energies Limited, TATA Power, Vikram Solar</strong>.
             </p>
 
             <p style={aboutPara}>
-              We are specialized in <strong>Visa Extension</strong>,
-              documentation, business travel, and long-term assignments.
-          <strong>Overall we provide services to all the Solar Industries located in India and worldwide.</strong>
+              We are specialized in <strong>Visa Extension</strong>, documentation,
+              business travel, and long-term assignments.
             </p>
 
             <ul style={{ listStyle: "none", padding: 0 }}>
@@ -136,7 +133,7 @@ export default function About() {
             </p>
 
             <p style={founderPara}>
-              Our mission is to make international travel stress-free by offering
+              Our mission is to simplify international travel by offering
               transparent guidance, timely processing, and dependable support
               at every step.
             </p>
@@ -149,6 +146,75 @@ export default function About() {
         </div>
       </section>
 
+      {/* ================= LEGAL & CERTIFICATIONS ================= */}
+      <section
+        id="legal"
+        style={{
+          padding: "45px 20px",
+          background: "#ffffff",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "900px", margin: "auto" }}>
+          <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "14px",  color: "#333",}}>
+            Legal Information & Certifications
+          </h3>
+
+          <img
+            src="/IATA.png"
+            alt="IATA Certificate"
+            style={{
+              width: "200px",
+              margin: "0 auto 12px",
+              display: "block",
+            }}
+          />
+
+          <p style={{ fontSize: "14px", marginBottom: "14px" }}>
+            IATA / UFTAA Certified Travel Professional
+          </p>
+
+          {/* ✅ BUTTON ABOVE LEGAL INFO */}
+          <a
+            href="https://drive.google.com/file/d/1RhnunHLA7eqil6JCyhGJTm6jBNHgZnm9/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              marginBottom: "20px",
+              padding: "10px 18px",
+              borderRadius: "6px",
+              background: "#ff0000",
+              color: "#fff",
+              fontWeight: "600",
+              textDecoration: "none",
+            }}
+          >
+            📄 View IATA Certificate (PDF)
+          </a>
+
+          {/* LEGAL INFO CARD */}
+          <div
+            style={{
+              margin: "0 auto",
+              maxWidth: "360px",
+              padding: "16px",
+              background: "#f8c7c7ff",
+              borderRadius: "8px",
+              boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+              fontSize: "14px",
+              lineHeight: "1.7",
+              textAlign: "left",
+               color: "#333",
+            }}
+          >
+            <p><strong>Legal Name:</strong> Hemlatta Kirit Joshi</p>
+            <p><strong>Trade Name:</strong> Lata Travels</p>
+            <p><strong>GSTIN:</strong> 27AHGPJ2858N1ZT</p>
+          </div>
+        </div>
+      </section>
+
       {/* ================= COUNTRIES WE SERVE ================= */}
       <section
         style={{
@@ -157,11 +223,11 @@ export default function About() {
           textAlign: "center",
         }}
       >
-        <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "8px" }}>
+        <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "10px" }}>
           Countries We Serve
         </h3>
 
-        <p style={{ fontSize: "14px", color: "#3c3b3b", marginBottom: "22px" }}>
+        <p style={{ fontSize: "14px",  color: "#333", marginBottom: "22px" }}>
           We proudly provide visa and travel services for multiple destinations worldwide.
         </p>
 
@@ -171,6 +237,7 @@ export default function About() {
             justifyContent: "center",
             gap: "24px",
             flexWrap: "wrap",
+             color: "#333",
           }}
         >
           {[

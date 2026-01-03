@@ -52,12 +52,18 @@ export default function Contact() {
         ></div>
 
         <div style={{ position: "relative", zIndex: 1 }}>
-          <h1 style={{ fontSize: "42px", marginBottom: "10px" }}>
+          <h1 style={{ fontSize: "42px", marginBottom: "10px"}}>
             Contact Us
           </h1>
-          <p style={{ opacity: 0.9 }}>
-            Feel free to get in touch with us
-          </p>
+          <p
+          style={{
+            opacity: 0.9,
+           
+          }}
+        >
+          Feel free to get in touch with us
+        </p>
+
         </div>
       </div>
 
@@ -69,10 +75,10 @@ export default function Contact() {
           textAlign: "center",
         }}
       >
-        <h2 style={{ marginBottom: "10px" }}>
+        <h2 style={{ marginBottom: "10px",  color: "#444",}}>
           Feel Free to Get in Touch with Us
         </h2>
-        <p style={{ marginBottom: "40px", color: "#777" }}>
+        <p style={{ marginBottom: "40px" ,color: "#444", }}>
           Contact With Us
         </p>
 
@@ -138,7 +144,7 @@ export default function Contact() {
             disabled={sending}
             style={{
               marginTop: "25px",
-              background: "#ff0000",
+              background: "#ff0000c6",
               color: "#fff",
               border: "none",
               padding: "12px 28px",
@@ -164,7 +170,7 @@ export default function Contact() {
       >
         <InfoCard title="Write to Us" text="Latatravels6@gmail.com" />
         <InfoCard title="Visit Us" text="Mumbai, Maharashtra, India" />
-        <InfoCard title="Call Us" text="+91 9082405292" />
+        <InfoCard title="Call Us" text="+91 9082405292, +91 9372305292" />
       </div>
 
       {/* ===== MAP ===== */}
@@ -205,12 +211,22 @@ function InfoCard({ title, text }) {
         background: "#fff",
         padding: "25px",
         boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
+        borderRadius: "10px",
       }}
     >
       <h4 style={{ marginBottom: "10px", color: "#ff0000" }}>
         {title}
       </h4>
-      <p>{text}</p>
+
+      <p
+        style={{
+          color: "#333", // visible in both dark & light mode
+          opacity: 0.9,
+        }}
+      >
+        {text}
+      </p>
     </div>
   );
 }
+

@@ -53,6 +53,7 @@ export default function Services() {
           fontSize: "28px",
           fontWeight: "700",
           letterSpacing: "1px",
+           color: "#333",
         }}
       >
         SERVICES
@@ -106,6 +107,7 @@ export default function Services() {
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 10px;
+             color: #333;
           }
 
           .service-card p {

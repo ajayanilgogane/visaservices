@@ -99,7 +99,7 @@ export default function Footer() {
         <div>
           <h4 style={heading}>Get In Touch</h4>
           <p style={contact}>📧 Latatravels6@gmail.com</p>
-          <p style={contact}>📞 +91 91908 24052</p>
+          <p style={contact}>📞 +91 9190824052, +91 9372305292</p>
           <p style={contact}>
             📍Mumbai, Maharashtra, India
           </p>
