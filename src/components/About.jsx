@@ -139,7 +139,7 @@ export default function About() {
             </p>
 
             <p style={{ fontWeight: "700" }}>
-              Jeshika Joshi –{" "}
+              Jeshika Lata Joshi –{" "}
               <span style={{ fontWeight: "400" }}>Lata Travels</span>
             </p>
           </div>

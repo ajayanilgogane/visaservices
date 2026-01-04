@@ -52,12 +52,12 @@ export default function Hero() {
           color: "#fff",
         }}
       >
-        {/* TOP SMALL TEXT */}
+        {/* TOP TEXT */}
         <p
           style={{
             fontSize: "20px",
             letterSpacing: "1px",
-            marginBottom: "14px",
+            marginBottom: "16px",
           }}
         >
           Welcome to{" "}
@@ -89,23 +89,28 @@ export default function Hero() {
           style={{
             fontSize: "18px",
             opacity: 0.9,
-            marginBottom: "16px",
+            marginBottom: "22px",
           }}
         >
-          Let’s Make it Happen
+          Let’s Make It Happen
         </p>
 
-        {/* ⭐ EMOTIONAL LINE */}
-        <p
+        {/* ⭐ MOTIVATIONAL MESSAGE (NEW) */}
+        <div
           style={{
-            fontSize: "17px",
-            fontWeight: "500",
-            marginBottom: "28px",
+            fontSize: "16px",
+            lineHeight: "1.7",
+            marginBottom: "30px",
             opacity: 0.95,
           }}
         >
-          😊 When visas get approved, people smile — that happiness and joy is what drives <strong>Lata Travels.</strong>
-        </p>
+          <p>😊 Speak your truth, believe in it, and watch embassy doors swing open.</p>
+          <p>Ready to turn your dreams into reality?</p>
+          <p>
+            Your visa approval is just a positive thought away — let’s make the
+            process as breezy as a walk in the park.
+          </p>
+        </div>
 
         {/* CTA BUTTON */}
         <a
@@ -119,14 +124,13 @@ export default function Hero() {
             fontSize: "16px",
             fontWeight: "600",
             borderRadius: "6px",
-            cursor: "pointer",
           }}
         >
           📞 Book Appointment
         </a>
       </div>
 
-      {/* MOBILE RESPONSIVE */}
+      {/* RESPONSIVE */}
       <style>
         {`
           @media (max-width: 768px) {
@@ -136,6 +140,10 @@ export default function Hero() {
 
             #hero p {
               font-size: 15px !important;
+            }
+
+            #hero div {
+              font-size: 14px !important;
             }
 
             #hero a {
