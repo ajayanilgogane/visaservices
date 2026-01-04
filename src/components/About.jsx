@@ -139,7 +139,7 @@ export default function About() {
             </p>
 
             <p style={{ fontWeight: "700" }}>
-              Jeshika Lata Joshi –{" "}
+              Jeshikha Lata Joshii –{" "}
               <span style={{ fontWeight: "400" }}>Lata Travels</span>
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function About() {
                color: "#333",
             }}
           >
-            <p><strong>Legal Name:</strong> Hemlatta Kirit Joshi</p>
+            <p><strong>Legal Name:</strong> Hemlata Kirit Joshi</p>
             <p><strong>Trade Name:</strong> Lata Travels</p>
             <p><strong>GSTIN:</strong> 27AHGPJ2858N1ZT</p>
           </div>

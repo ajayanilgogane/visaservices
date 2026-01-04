@@ -66,7 +66,7 @@ export default function Footer() {
               <strong>GSTIN:</strong> 27AHGPJ2858N1ZT
             </p>
             <p style={legalText}>
-              <strong>Legal Name:</strong> Hemlatta Kirit Joshi
+              <strong>Legal Name:</strong> Hemlata Kirit Joshi
             </p>
             <p style={legalText}>
               <strong>Trade Name:</strong> Lata Travels
