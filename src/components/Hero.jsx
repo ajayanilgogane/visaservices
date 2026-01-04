@@ -104,7 +104,7 @@ export default function Hero() {
             opacity: 0.95,
           }}
         >
-          😊 When visas get approved, smiles follow — that’s the joy that drives <strong>Lata Travels.</strong>
+          😊 When visas get approved, people smile — that happiness and joy is what drives <strong>Lata Travels.</strong>
         </p>
 
         {/* CTA BUTTON */}
