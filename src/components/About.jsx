@@ -160,38 +160,24 @@ export default function About() {
             Legal Information & Certifications
           </h3>
 
-          <img
-            src="/IATA.png"
-            alt="IATA Certificate"
-            style={{
-              width: "200px",
-              margin: "0 auto 12px",
-              display: "block",
-            }}
-          />
+         <img
+          src="/IATA.png"
+          alt="IATA Certificate"
+          style={{
+            width: "200px",
+            height: "100px",
+            margin: "0 auto 12px",
+            display: "block",
+            border: "2px solid #000",   // thick black border
+            borderRadius: "6px",        // optional: slightly rounded corners
+            padding: "6px",             // space between image and border
+            backgroundColor: "#fff",    // keeps logo clean
+          }}
+        />
 
           <p style={{ fontSize: "14px", marginBottom: "14px" }}>
             IATA / UFTAA Certified Travel Professional
           </p>
-
-          {/* ✅ BUTTON ABOVE LEGAL INFO */}
-          <a
-            href="https://drive.google.com/file/d/1RhnunHLA7eqil6JCyhGJTm6jBNHgZnm9/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              marginBottom: "20px",
-              padding: "10px 18px",
-              borderRadius: "6px",
-              background: "#ff0000",
-              color: "#fff",
-              fontWeight: "600",
-              textDecoration: "none",
-            }}
-          >
-            📄 View IATA Certificate (PDF)
-          </a>
 
           {/* LEGAL INFO CARD */}
           <div

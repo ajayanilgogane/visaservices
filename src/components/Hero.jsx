@@ -40,7 +40,7 @@ export default function Hero() {
           background: "rgba(0,0,0,0.65)",
           zIndex: 1,
         }}
-      ></div>
+      />
 
       {/* CONTENT */}
       <div
@@ -57,11 +57,16 @@ export default function Hero() {
           style={{
             fontSize: "20px",
             letterSpacing: "1px",
-            marginBottom: "16px",
+            marginBottom: "14px",
           }}
         >
           Welcome to{" "}
-          <span style={{ color: "#ff0000", fontWeight: "700" , fontSize: "20px", }}>
+          <span
+            style={{
+              color: "#ff0000",
+              fontWeight: "700",
+            }}
+          >
             LATA TRAVELS
           </span>
         </p>
@@ -84,30 +89,41 @@ export default function Hero() {
           style={{
             fontSize: "18px",
             opacity: 0.9,
-            marginBottom: "30px",
+            marginBottom: "16px",
           }}
         >
           Let’s Make it Happen
         </p>
 
-        {/* CTA BUTTON */}
-     <a
-      href="#contact"
-      style={{
-        display: "inline-block",
-        background: "#ff0000",
-        color: "#fff",
-        textDecoration: "none",
-        padding: "14px 28px",
-        fontSize: "16px",
-        fontWeight: "600",
-        borderRadius: "6px",
-        cursor: "pointer",
-      }}
-    >
-      📞 Book Appointment
-    </a>
+        {/* ⭐ EMOTIONAL LINE */}
+        <p
+          style={{
+            fontSize: "17px",
+            fontWeight: "500",
+            marginBottom: "28px",
+            opacity: 0.95,
+          }}
+        >
+          😊 When visas get approved, smiles follow — that’s the joy that drives <strong>Lata Travels.</strong>
+        </p>
 
+        {/* CTA BUTTON */}
+        <a
+          href="#contact"
+          style={{
+            display: "inline-block",
+            background: "#ff0000",
+            color: "#fff",
+            textDecoration: "none",
+            padding: "14px 28px",
+            fontSize: "16px",
+            fontWeight: "600",
+            borderRadius: "6px",
+            cursor: "pointer",
+          }}
+        >
+          📞 Book Appointment
+        </a>
       </div>
 
       {/* MOBILE RESPONSIVE */}
@@ -122,7 +138,7 @@ export default function Hero() {
               font-size: 15px !important;
             }
 
-            #hero button {
+            #hero a {
               padding: 12px 22px;
               font-size: 15px;
             }
